@@ -1,0 +1,138 @@
+analysis_framework:
+  # Initial domain discovery
+  domain_analysis:
+    instructions: |
+      First, identify the following about this paper:
+      1. Primary field(s) of study
+      2. Type of contribution (methodology, review, experimental, theoretical, etc.)
+      3. Key terminology that suggests specialized knowledge areas
+      4. Major themes or concepts that form the paper's foundation
+      
+      Structure your findings to enable deeper analysis of each identified component.
+      Be specific about technical terms and their contexts.
+      Identify any interdisciplinary connections or applications.
+
+  # Knowledge structure mapping
+  structural_analysis:
+    instructions: |
+      For each major concept identified in the paper:
+      1. Map out its hierarchical components
+      2. Identify relationships with other concepts
+      3. Note the depth of treatment (introductory, detailed, comprehensive)
+      4. Flag areas where the paper makes novel contributions
+      5. Identify any assumptions or prerequisites
+      6. Note any competing or alternative approaches mentioned
+      7. Highlight key mathematical or theoretical frameworks used
+
+  # Detailed extraction guidance
+  deep_dive:
+    technical_components:
+      instructions: |
+        For each identified technical component:
+        1. What specific approaches or methods are described?
+        2. What tools, techniques, or frameworks are employed?
+        3. How are results validated or verified?
+        4. What are the key parameters or variables?
+        5. What constraints or limitations are mentioned?
+        6. What are the performance metrics or success criteria?
+        7. How does this compare to existing approaches?
+        8. What are the computational or resource requirements?
+
+    methodological_aspects:
+      instructions: |
+        For any methodology presented:
+        1. What is the step-by-step process?
+        2. What are the critical decision points?
+        3. What prerequisites or assumptions are made?
+        4. How is success measured or evaluated?
+        5. What are the key parameters or controls?
+        6. What potential sources of error are considered?
+        7. How is reproducibility addressed?
+        8. What validation methods are used?
+
+    experimental_elements:
+      instructions: |
+        For any experimental work:
+        1. What was the experimental setup?
+        2. What variables were controlled vs. measured?
+        3. What data was collected and how?
+        4. How were results analyzed?
+        5. What statistical methods were employed?
+        6. What were the error bounds or confidence intervals?
+        7. How was experimental bias addressed?
+        8. What were the key challenges or limitations?
+
+    theoretical_framework:
+      instructions: |
+        For theoretical contributions:
+        1. What are the foundational principles?
+        2. What mathematical or logical frameworks are used?
+        3. How are propositions proved or validated?
+        4. What are the boundary conditions?
+        5. What assumptions are made?
+        6. How does this extend existing theory?
+        7. What are the implications for practical applications?
+        8. What theoretical limitations exist?
+
+  # Integration and synthesis
+  synthesis:
+    instructions: |
+      Connect and synthesize the detailed findings:
+      1. How do different components interact or depend on each other?
+      2. What are the key innovations or contributions?
+      3. What are the practical implications or applications?
+      4. What questions or areas remain open for future work?
+      5. How does this work advance the field?
+      6. What are the potential impact areas?
+      7. What are the implementation challenges?
+      8. What future research directions are suggested?
+
+output_format:
+  structure: |
+    # Paper Analysis
+
+    ## Domain Overview
+    - Field(s) of Study
+    - Type of Contribution
+    - Key Terminology
+    - Major Themes
+
+    ## Knowledge Structure
+    - Concept Hierarchy
+    - Relationships
+    - Novel Contributions
+
+    ## Detailed Analysis
+    [For each major component identified:]
+    ### [Component Name]
+    - Technical Details
+    - Methodology
+    - Results/Findings
+    - Limitations
+
+    ## Integration
+    - Key Innovations
+    - Practical Applications
+    - Dependencies and Relationships
+
+    ## Critical Assessment
+    - Strengths
+    - Limitations
+    - Future Directions
+
+prompt_settings:
+  global_instructions: |
+    Analyze this research paper with attention to detail and academic rigor.
+    Adapt your analysis depth based on the complexity and novelty of each component.
+    Focus on extracting concrete, specific information rather than general statements.
+    Identify and elaborate on technical details while maintaining clarity.
+    
+  tone: "academic and analytical"
+  output_style: "detailed yet clear"
+  
+  response_format: |
+    Use markdown formatting.
+    Use bullet points for lists.
+    Include section headers.
+    Code blocks for technical content.
+    Tables for comparative analysis.
